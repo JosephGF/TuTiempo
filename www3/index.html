@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>Tu Tiempo</title>
+    <!-- CSS -->
+    <link media="screen,projection" rel="stylesheet" type="text/css" href="css/material.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/weather-icons.css" />
+    <link rel="stylesheet" href="css/weather-icons-color.css" />
+    <link rel="stylesheet" href="css/weather-icons-extends.css" />
+    <link rel="stylesheet" href="css/css-animations.css" />
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/application.css" />
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+
+<body>
+    <!-- Simple header with fixed tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Title</span>
+            </div>
+            <!-- Tabs -->
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#fixed-tab-1" class="mdl-layout__tab">Tab 1</a>
+                <a href="#fixed-tab-2" class="mdl-layout__tab is-active">Tab 2</a>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Title</span>
+        </div>
+        <main class="mdl-layout__content">
+            <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1" style="min-height:800px;">
+                <div class="page-content">
+                    <div id="div-weathrer-location" class="card-panel" style="margin:10px">
+                        <div id="location-map" style="position:absolute;top:0;left:0;width:100%;bottom:0;right:0;height:100%;"></div>
+                    </div>
+                </div>  
+            </section>
+            <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+                <div id="map" class="page-content" style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:-1;"></div>
+            </section>
+        </main>
+        
+        
+         <dialog class="mdl-dialog">
+            <div class="mdl-dialog__content">
+              <p>
+                Allow this site to collect usage data to improve your experience?
+              <p>
+            </div>
+            <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
+              <button type="button" class="mdl-button">Agree</button>
+              <button type="button" class="mdl-button close">Disagree</button>
+            </div>
+          </dialog>
+          <script>
+            var dialog = document.querySelector('dialog');
+            var showModalButton = document.querySelector('.show-modal');
+            if (! dialog.showModal) {
+              dialogPolyfill.registerDialog(dialog);
+            }
+            showModalButton.addEventListener('click', function() {
+              dialog.showModal();
+            });
+            dialog.querySelector('.close').addEventListener('click', function() {
+              dialog.close();
+            });
+          </script>
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="js/extensions/extendsDate.js"></script>
+    <script src="js/extensions/extendsString.js"></script>
+    <script src="js/extensions/extendsNumber.js"></script>
+
+    <script src="js/languajeES.js"></script>
+    <script src="js/configuration.js"></script>
+
+    <script src="js/material.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet-providers.js"></script>
+    <script src="js/mapa.js"></script>
+    <script src="js/openWeather.js"></script>
+    <script src="js/openWeather.draw.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/index.js"></script>
+    <script></script>
+</body>
+
+</html>

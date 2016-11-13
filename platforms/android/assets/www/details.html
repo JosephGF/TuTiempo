@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- Required meta viewport tag. Do not modify this! -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+  <!-- "Add to homescreen" support -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <title>Fries Template</title>
+
+  <link rel="shortcut icon" href="favicon.png"/>
+
+  <link rel="stylesheet" href="theme/themes/holo-dark/holo-dark.min.css" />
+  <link rel="stylesheet" href="css/weather-icons.css" />
+  <link rel="stylesheet" href="css/weather-icons-color.css" />
+  <link rel="stylesheet" href="css/holo-dark-extends.css" />
+  <link rel="stylesheet" href="css/weather-icons-extends.css" />
+  <link rel="stylesheet" href="css/css-animations.css" />
+
+  <!-- Or use individually -->
+  <!--
+  <link rel="stylesheet" href="../dist/css/holo-dark/base.css" />
+  <link rel="stylesheet" href="../dist/css/holo-dark/animations.css" />
+  <link rel="stylesheet" href="../dist/css/holo-dark/content.css" />
+  <link rel="stylesheet" href="../dist/css/holo-dark/action-bars.css" />
+  <link rel="stylesheet" href="../dist/css/holo-dark/buttons.css" />
+  <link rel="stylesheet" href="../dist/css/holo-dark/dialogs.css" />
+  <link rel="stylesheet" href="../dist/css/holo-dark/icomoon.css" />
+  <link rel="stylesheet" href="../dist/css/holo-dark/forms.css" />
+  <link rel="stylesheet" href="../dist/css/holo-dark/lists.css" />
+  <link rel="stylesheet" href="../dist/css/holo-dark/sliders.css" />
+  <link rel="stylesheet" href="../dist/css/holo-dark/spinners.css" />
+  <link rel="stylesheet" href="../dist/css/holo-dark/stack.css" />
+  <link rel="stylesheet" href="../dist/css/holo-dark/tabs.css" />
+  <link rel="stylesheet" href="../dist/css/holo-dark/toasts.css" />
+  -->
+</head>
+<body>
+
+  <!-- All your pages must be wrapped in a div.page so that stack.js works -->
+  <div class="page">
+
+    <header class="action-bar fixed-top">
+      <a href="index.html" class="app-icon action" data-ignore="true">
+        <i class="icon-fries"></i>
+      </a>
+
+      <h1 id="navbarTitle" class="title">Title</h1>
+
+      <!-- Add action buttons here -->
+
+    </header>
+	<nav class="tab-fixed">
+	  <ul class="tab-inner">
+		<li class="active"><a href="#weather-current" data-ignore="true"><i class="wi wi-horizon-alt icon-24"></i></a></li>
+		<li><a href="#weather-hours" data-ignore="true"><i class="icon-clock"></i></a></li>
+		<li><a href="#weather-days" data-ignore="true"><i class="icon-calendar"></i></a></li>
+	  </ul>
+	</nav>
+	
+
+    <div class="content" style="margin-top:10px;">
+		<!--<div id="divHeader">
+			<i class="wi wi-weather wi-day-rain icon-48" style="float:left"></i>
+            <h1 style='position:relative;top:20px;text-align:center;'>Pedro Muñoz</h1>
+			<div style="clear: both;height;">
+		</div>-->
+       <div class="slider tab-slider">
+          <li id="weather-current" class="tab-item active">
+            <ul class="list inset">
+				<div id="weather-data" style="padding:12px;">
+				</ul>
+			</li>
+			<li id="weather-hours" class="tab-item">
+				<ul class="list inset"  id="weather-hours-list" >
+				</ul>
+			</li>
+			<li id="weather-days" class="tab-item">
+				<ul class="list inset" id="weather-days-list">
+				</ul>
+			</li>
+		</div>
+      <!-- Add anything here -->
+    </div>
+
+    <div class="dialogs">
+      <!-- This is a requried container for your dialogs. All dialogs that you want to display in this page go here -->
+      <div id="my-dialog" class="dialog">
+        <header class="dialog-title-region">
+          <h1 class="title">Detalle</h1>
+        </header>
+        <div class="dialog-content">
+			<div id="weather-dialog-content" style="padding:12px;">
+
+			</div>
+        </div>
+        <ul class="dialog-actions">
+          <li style="width:100%;"><a href="javascript: void(0);" class="dialog-ok-button">Aceptar</a></li>
+          <!-- <li><a href="javascript: void(0);" class="dialog-cancel-button">Cancelar</a></li>-->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery-1.9.0.js"></script>
+  <!-- Scripts at the bottom -->
+  <script src="theme/fries.js"></script>
+
+  <!-- Or use individually -->
+  <!--
+  <script src="../lib/js/utils.js"></script>
+  <script src="../lib/js/action-bars.js"></script>
+  <script src="../lib/js/forms.js"></script>
+  <script src="../lib/js/spinners.js"></script>
+  <script src="../lib/js/stack.js"></script>
+  <script src="../lib/js/dialogs.js"></script>
+  <script src="../lib/js/tabs.js"></script>
+  <script src="../lib/js/toasts.js"></script>
+  -->
+
+  <!-- Use fingerblast when testing on the browser -->
+  <script src="js/extensions/extendsDate.js"></script>
+  <script src="js/extensions/extendsString.js"></script>
+  <script src="js/extensions/extendsNumber.js"></script>
+  
+  <script src="theme/fingerblast.js"></script>
+  
+  <script src="js/leaflet.js"></script>
+  <script src="js/mapa.js"></script>
+  <script src="js/openWeather.js"></script>
+  <script src="js/openWeather.draw.js"></script>
+  
+  <script src="js/langualeES.js"></script>
+  <script src="js/details.js"></script>
+  <footer><span>2014 &copy</span></footer>
+</body>
+</html>

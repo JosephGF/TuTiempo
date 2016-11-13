@@ -1,0 +1,28 @@
+ul.ui-autocomplete {
+	top:1px;
+	list-style-type: none;
+	height:330px;
+	background-color:black;
+	overflow:auto;
+}
+ul.ui-autocomplete li.ui-menu-item  {
+	/*width: 90px;*/
+	background-color:black;
+}
+
+li.ui-menu-item > a {
+	height: 60px;
+	/*color:white;*/
+	font-size:25px;
+	vertical-align: middle;
+	/*background-color:black;*/
+}
+
+li.ui-menu-item > a:HOVER {
+	background-color: rgba(51, 181, 229, 0.6);
+}
+
+li.ui-menu-item > a:ACTIVE {
+	background-color: rgba(51, 181, 229, 0.6);
+}
+.ui-helper-hidden-accessible { display:none; }

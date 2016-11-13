@@ -1,0 +1,35 @@
+.icon-16 {
+font-size: 16px;
+}
+.icon-24 {
+font-size: 24px;
+}
+.icon-32 {
+font-size: 32px;
+}
+.icon-48 {
+font-size: 48px;
+}
+.icon-64 {
+font-size: 64px;
+}
+.wi-weather {
+padding:8px;
+width:86px;
+height:64px;
+}
+
+.wi-weather-32 {
+padding:8px;
+width:70px;
+height:40px;
+text-align:center;
+}
+.wi-weather-text-32 {
+font-size:30px;
+text-align:center;
+height:40px;
+vertical-align:middle;
+width:100%;
+line-height: 1.5;
+}

@@ -1,0 +1,45 @@
+.list-item-title {
+	background-color: #33b5e5;
+	font-weight:bold;
+	font-size:15px !important;
+	text-align:center;
+	padding:2px !important;
+	line-height:18px !important;
+	height: 22px !important;
+}
+
+
+.weatherMarker  {
+	width: 80px;
+	/*opacity: 0.7;*/
+	text-align: center;
+	background: rgba(211,211,211, 0.6);
+	border-radius: 10px;
+	border: 1px solid darkgray;
+}
+.divMap {
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:0;
+}
+/*  override */
+.leaflet-div-icon {
+	border:none !important;
+	background: rgba(0,0,0,0) !important;
+}
+
+.divSearch {
+	position:absolute;
+	top:-6px;
+	width:102%;
+	left:-1%;
+	background-color:#222;
+}
+.divSearch input {
+	position:relative;
+	left:2%;
+	width:96%;
+}

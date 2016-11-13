@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>Tu Tiempo</title>
+    <!-- CSS -->
+    <link media="screen,projection" rel="stylesheet" type="text/css" href="css/materialize.css" />
+    <link rel="stylesheet" href="css/weather-icons.css" />
+    <link rel="stylesheet" href="css/weather-icons-color.css" />
+    <link rel="stylesheet" href="css/weather-icons-extends.css" />
+    <link rel="stylesheet" href="css/css-animations.css" />
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/application.css" />
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+</head>
+
+<body>
+    <nav class="fixed">
+        <div class="nav-wrapper cyan darken-3">
+            <a id="nav-title" href="#!" class="brand-logo" style="margin-left:20px;">Tu Tiempo</a>
+            <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <div class="input-field" style="margin-left:5px;margin-right:5px;max-height:65px;">
+                        <input id="menu-search" type="search" required maxlength="50"> &nbsp;
+                        <label for="menu-search"><i class="mdi-action-search" onclick="index.search('menu-search')"></i>
+                        </label>
+                    </div>
+                </li>
+                <li><a href="javascript:location.reload();"><i class="mdi-navigation-refresh"></i></a>
+                </li>
+                <li><a href="#!"><i class="mdi-action-settings"></i></a>
+                </li>
+            </ul>
+            <ul class="side-nav" id="mobile-menu">
+                <li class="logo">
+                    <a id="logo-container" href="index.html" class="brand-logo">
+                        <object id="front-page-logo" type="image/svg+xml" data="http://materializecss.com/res/materialize.svg">Your browser does not support SVG</object>
+                    </a>
+                </li>
+                <li>
+                    <div class="row" style="margin-bottom:0px;line-height:5px;">
+                        <div class="col s9">
+                            <input id="menu-search-movil" type="search" required  maxlength="50" style="color:#444;">
+                        </div>
+                        <div class="col s3">
+                            <i class="mdi-action-search" style="position:relative; color:#444;height: 38px;font-size: 25px; top:22px;" onclick="index.search('menu-search-movil')"></i>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                </li>
+                <li><a href="javascript:location.reload();"><i class="mdi-navigation-refresh"></i> <span id="menu-refresh">Actualizar</span></a>
+                </li>
+                <li><a href="#!"><i class="mdi-action-settings"></i> <span id="menu-config">Configuración</span></a>
+                </li>
+                <li><a href="window.close()"><i class="mdi-action-exit-to-app"></i> <span id="menu-exit">Salir</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s3"><a class="active" href="#list"><span  id="tab-cities">Ciudades</span></a>
+                </li>
+                <li class="tab col s3"><a href="#map"><span id="tab-map">Mapa</span></a>
+                </li>
+            </ul>
+        </div>
+        <div id="list" class="col s12">
+            <div id="div-weathrer-location" class="card-panel" style="margin:10px">
+                <div id="location-map" style="position:absolute;top:0;left:0;width:100%;bottom:0;right:0;height:100%;"></div>
+            </div>
+            <div id="div-favorites" class="row">
+
+            </div>
+        </div>
+        <div id="map" style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:-1;"></div>
+    </main>
+    <div id="modal" class="modal">
+        <div id="weather-dialog-content" class="modal-content">
+
+        </div>
+        <div class="modal-footer">
+            <a href="javascript:index.dialogCallback(this, 'details');" class="waves-effect waves-red btn-flat modal-action"><span id="dialog-detail">Detalle</span></a>
+            <a href="javascript:index.dialogCallback(this, 'favourite');" class="waves-effect waves-red btn-flat modal-action"><span id="dialog-favorites">A Favoritos</span></a>
+            <a href="javascript:index.dialogCallback(this, 'close');" class="waves-effect waves-red btn-flat modal-action hidden-s"><span id="dialog-cancel">Cancelar</span></a>
+        </div>
+    </div>
+    <!-- Scripts -->
+
+    <script src="js/extensions/extendsDate.js"></script>
+    <script src="js/extensions/extendsString.js"></script>
+    <script src="js/extensions/extendsNumber.js"></script>
+
+    <script src="js/languajeES.js"></script>
+    <script src="js/configuration.js"></script>
+
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet-providers.js"></script>
+    <script src="js/mapa.js"></script>
+    <script src="js/openWeather.js"></script>
+    <script src="js/openWeather.draw.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        $(".button-collapse").sideNav();
+        $(".dropdown-button").dropdown()
+    </script>
+</body>
+
+</html>

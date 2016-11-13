@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>Materialize</title>
+    <!-- CSS -->
+    <link media="screen,projection" rel="stylesheet" type="text/css" href="css/materialize.css" />
+    <link rel="stylesheet" href="css/weather-icons.css" />
+    <link rel="stylesheet" href="css/weather-icons-color.css" />
+    <link rel="stylesheet" href="css/weather-icons-extends.css" />
+    <link rel="stylesheet" href="css/css-animations.css" />
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/application.css" />
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+
+</head>
+
+<body>
+  <div class="navbar-fixed">
+		<nav>
+			<div class="nav-wrapper">
+				<a id="nav-title" href="index.html" class="brand-logo" style="margin-left:20px;">Tu Tiempo</a>
+				<a href="index.html"  class="button-collapse" ><i class="mdi-hardware-keyboard-arrow-left"></i></a>
+				<a href="#!" class="tooltipped" data-position="left" data-delay="50" data-tooltip="I am tooltip"><i class="mdi-action-grade" style="float:right;margin-right:5px;"></i></a>
+			</div>
+		</nav>
+    </div>
+    <main>
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s3"><a href="#tab1" class="active"><span id="tab-today">Hoy</span></a>
+                </li>
+                <li class="tab col s3"><a href="#tab2"><span id="tab-byHour">Por Hora</span></a>
+                </li>
+                <li class="tab col s3"><a href="#tab3"><span id="tab-byDay">Por Dia</span></a>
+                </li>
+            </ul>
+        </div>
+        <div id="tab1" class="col s12 gardien-black" style="position:relative;top:10px;">
+            <img id="imgWeather" onload="fadeInImage(this);" style="position:absolute;top:0px;left:0px;min-height:400px;width:100%;z-index:-1;" onerror="this.src='resources/weather/000.jpg'">
+            <div id="weather-data" style="padding:12px;">
+            </div>
+        </div>
+        <div id="tab2" class="col s12">
+            <ul class="collection" id="weather-hours-list">
+            </ul>
+        </div>
+        <div id="tab3" class="col s12">
+            <ul  id="weather-days-list" class="collection">
+            </ul>
+        </div>
+    </main>
+    <div id="modal" class="modal">
+        <div id="weather-dialog-content" class="modal-content">
+          
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="waves-effect waves-red btn-flat modal-action modal-close"><span id="dialog-close">Cerrar</span></a>
+        </div>
+    <!-- Scripts -->
+
+    <script src="js/extensions/extendsDate.js"></script>
+    <script src="js/extensions/extendsString.js"></script>
+    <script src="js/extensions/extendsNumber.js"></script>
+        
+    <script src="js/languajeES.js"></script>
+    <script src="js/configuration.js"></script>
+        
+    <script src="js/leaflet.js"></script>
+    <script src="js/mapa.js"></script>
+    <script src="js/openWeather.js"></script>
+    <script src="js/openWeather.draw.js"></script>
+    <script src="js/favorites.js"></script>
+
+    <script src="js/details.js"></script>
+</body>
+</html>

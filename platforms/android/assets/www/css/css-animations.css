@@ -1,0 +1,64 @@
+/** ANIMATION TO ROTATE ELEMENT **/
+.rotate3Dx {
+    -webkit-animation: rotation3Dx 2s infinite linear;
+	animation: rotation3Dx 2s infinite linear;
+}
+
+@-webkit-keyframes rotation3Dx {
+    from {-webkit-transform: rotateX(0deg);}
+    to   {-webkit-transform: rotateX(359deg);}
+}
+
+@keyframes rotation3Dx {
+    from { transform: rotateX(0deg);}
+    to   {transform: rotateX(359deg);}
+}
+
+/** ANIMATION TO ROTATE ELEMENT **/
+.rotate3Dy {
+    -webkit-animation: rotation3Dy 2s infinite linear;
+	animation: rotation3Dy 2s infinite linear;
+}
+
+@-webkit-keyframes rotation3Dy {
+    from {-webkit-transform: rotateY(0deg);}
+    to   {-webkit-transform: rotateY(359deg);}
+}
+
+@keyframes rotation3Dy {
+    from { transform: rotateY(0deg);}
+    to   {transform: rotateY(359deg);}
+}
+
+/** ANIMATION TO ROTATE ELEMENT **/
+.rotate {
+    -webkit-animation: rotation 2s infinite linear;
+	animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(359deg);}
+}
+
+@keyframes rotation {
+    from { transform: rotate(0deg);}
+    to   {transform: rotate(359deg);}
+}
+
+.pulse {
+	-webkit-animation:  pulses 2s infinite;
+	animation: pulses 2s infinite;
+}
+
+@-webkit-keyframes pulses {
+    0% {opacity:1;}
+    50%   {opacity:0;}
+	0% {opacity:1;}
+}
+
+@keyframes pulses {
+    0% {opacity:1;}
+    50%   {opacity:0;}
+	100% {opacity:1;}
+}
